@@ -1,35 +1,30 @@
 /* ---------------------------------
-Flippable
+Flip
 --------------------------------- */
 
 import * as React from "react";
+import { PropsWithChildren, ReactElement, useContext, useState } from "react";
 import { animated, useSpring } from "react-spring";
-import {
-  PropsWithChildren,
-  ReactElement,
-  ReactNode,
-  useContext,
-  useState,
-} from "react";
 
 export type FlippableState = {
   flipped?: boolean;
-  toggleFlipped?: React.Dispatch<boolean>;
+  setFlipped?: React.Dispatch<boolean>;
 };
 
-type FlipItemsProps = Record<string, unknown> & FlippableState;
-
-export type FlippableProps = {};
+export type FlipProps = {};
 
 // FlipContext
-const FlipContext = React.createContext({ flipped: false, setFlipped(s) {} });
+const FlipContext = React.createContext<FlippableState>({
+  flipped: false,
+  setFlipped(s) {},
+});
 
 /**
- * Flippable
+ * Flip
  * @param children
  * @constructor
  */
-const Flippable = ({ children }: { children: ReactNode }) => {
+const Flip: React.FC<FlipProps> = ({ children }) => {
   const [flipped, setFlipped] = useState(false);
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
@@ -49,7 +44,7 @@ const Flippable = ({ children }: { children: ReactNode }) => {
  * @param children
  * @constructor
  */
-function Front({ children }: PropsWithChildren<{}>): ReactElement | null {
+function Front({ children }: PropsWithChildren<{}>): ReactElement {
   const { flipped, setFlipped, transform, opacity } = useContext(FlipContext);
 
   return (
@@ -72,8 +67,8 @@ function Front({ children }: PropsWithChildren<{}>): ReactElement | null {
  * @param children
  * @constructor
  */
-function Back({ children }: PropsWithChildren<{}>): ReactElement | null {
-  const { transform, opacity } = useContext(FlipContext);
+function Back({ children }: PropsWithChildren<{}>): ReactElement {
+  const { flipped, setFlipped, transform, opacity } = useContext(FlipContext);
   return (
     <animated.div
       className="animatedFrame"
@@ -83,13 +78,13 @@ function Back({ children }: PropsWithChildren<{}>): ReactElement | null {
         transform: transform.interpolate((t) => `${t} rotateY(180deg)`),
       }}
     >
-      {children}
+      {children({ flipped, setFlipped })}
     </animated.div>
   );
 }
 
 // export
-Flippable.Front = Front;
-Flippable.Back = Back;
+Flip.Front = Front;
+Flip.Back = Back;
 
-export default Flippable;
+export default Flip;
