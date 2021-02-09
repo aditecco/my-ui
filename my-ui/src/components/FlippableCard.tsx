@@ -1,3 +1,7 @@
+/* ---------------------------------
+FlippableCard
+--------------------------------- */
+
 import * as React from "react";
 import CardFlipControls from "./CardFlipControls";
 import Flip from "./Flip";

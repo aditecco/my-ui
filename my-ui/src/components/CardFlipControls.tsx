@@ -4,11 +4,12 @@
 CardFlipControls
 --------------------------------- */
 
-import React, { PropsWithChildren, ReactElement } from "react";
+import * as React from "react";
 import { css } from "@emotion/react";
 import { flex } from "../css-functions";
 import classNames from "classnames";
 import MaterialIcon from "../_import/MaterialIcon/MaterialIcon";
+import { PropsWithChildren, ReactElement } from "react";
 
 type OwnProps = {
   onFlip: () => React.Dispatch<boolean>;

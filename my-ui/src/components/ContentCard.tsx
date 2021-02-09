@@ -2,19 +2,18 @@
 ContentCard
 --------------------------------- */
 
-import React, { PropsWithChildren, ReactElement } from "react";
+import * as React from "react";
 import CardFooter from "./CardFooter";
 import Card from "./Card";
 import CardControls from "./CardControls";
+import { PropsWithChildren, ReactElement } from "react";
 
 type OwnProps = {};
 
-export default function ContentCard({}: PropsWithChildren<
-  OwnProps
->): ReactElement | null {
+export default function ContentCard({}: PropsWithChildren<OwnProps>): ReactElement {
   return (
     <Card>
-      <pre>html {}</pre>
+      <h1>Hello world</h1>
 
       <CardFooter>
         <CardControls>
