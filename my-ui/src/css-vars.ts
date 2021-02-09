@@ -3,16 +3,16 @@ style-vars
 ======================== */
 
 // layout
-export const $padding = "20px";
+export const padding = "20px";
 export const $_padding = "1.6rem";
-export const $margin = "20px";
+export const margin = "20px";
 export const $spacer = "20px";
 export const $gutter = "$spacer";
 
 // families
-export const $archivo = "'Archivo', sans-serif";
+export const archivo = "'Archivo', sans-serif";
 export const $firaSans = "'Fira Sans', sans-serif";
-export const $workSans = "'Work Sans', sans-serif";
+export const workSans = "'Work Sans', sans-serif";
 export const $montserrat = "'Montserrat', sans-serif";
 export const $material = "'Material Icons'";
 export const baseFontStack =
@@ -22,7 +22,7 @@ export const baseFontStack =
 export const $fontPrimary = null;
 export const $fontSecondary = null;
 export const $bodyFont = $firaSans;
-export const $titleFont = $archivo;
+export const $titleFont = archivo;
 export const $body = "16px";
 export const $small = "$body * 0.9";
 export const $xSmall = "$small - 2";
@@ -58,7 +58,7 @@ export const $bottomDrawerPadding = "45vh;";
 export const $border = "1px solid rgba($flat-gray-2, 0.5)";
 export const $borderDark = "1px solid rgba($flat-gray-2, 0.8)";
 export const $outline = "null";
-export const $radius = "4px";
+export const radius = "4px";
 export const $shadow = "0 2px 20px 6px rgba(black, 0.1)";
 export const $lightShadow = "0 4px 4px rgba(0, 0, 0, 0.03)";
 export const $innerShadow = "inset 0 -2px 10px rgba(black, 0.1)";
@@ -66,7 +66,7 @@ export const $textShadow = "0 2px 20px black";
 export const $ligthTextShadow = "0 1px 1px rgba(black, 0.2)";
 
 // colors
-export const $accent = "$flat-red-1";
+export const accent = "$flat-red-1";
 export const $accentDark = "$flat-red-2";
 export const $backgroundMain = "$flat-gray-1";
 export const $backgroundLight = "rgba($backgroundMain, 0.4)";
@@ -77,6 +77,6 @@ export const $error = "rgba($flat-red-1, 0.8)";
 export const $paleYellow = "#fffae1e7";
 export const $strokeLight = "$backgroundMain";
 export const $darkGray = "#444";
-export const $font = "lighten(black, 0.2)";
-export const $fontAlt = "#444";
+export const font = "lighten(black, 0.2)";
+export const fontAlt = "#444";
 export const $fontLight = "$flat-gray-4";
