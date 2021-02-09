@@ -1,6 +1,6 @@
 import React from "react";
 import emotionReset from "emotion-reset";
-import { ThemeProvider, Global } from "@emotion/react";
+import { ThemeProvider, Global, css } from "@emotion/react";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
