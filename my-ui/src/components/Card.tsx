@@ -4,9 +4,10 @@
 Card
 --------------------------------- */
 
-import React, { PropsWithChildren, ReactElement } from "react";
+import * as React from "react";
 import { $cardMaxWidth, baseFontStack, cardHeight } from "../css-vars";
 import { css } from "@emotion/react";
+import { PropsWithChildren, ReactElement } from "react";
 
 export default function Card({
   children,

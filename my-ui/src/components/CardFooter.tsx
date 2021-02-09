@@ -4,22 +4,22 @@
 CardFooter
 --------------------------------- */
 
-import React, { PropsWithChildren, ReactElement } from "react";
-import { flex } from "../css-functions";
+import * as React from "react";
+import { PropsWithChildren, ReactElement } from "react";
 import { css } from "@emotion/react";
-import { $radius } from "../css-vars";
+import { radius } from "../css-vars";
 
 type OwnProps = {};
 
 export default function CardFooter({
   children,
-}: PropsWithChildren<OwnProps>): ReactElement | null {
+}: PropsWithChildren<OwnProps>): ReactElement {
   return (
     <footer
       className="CardFooter"
       css={css`
-        border-bottom-right-radius: ${$radius};
-        border-bottom-left-radius: ${$radius};
+        border-bottom-right-radius: ${radius};
+        border-bottom-left-radius: ${radius};
       `}
     >
       {children}
