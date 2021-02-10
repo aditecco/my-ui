@@ -5,11 +5,11 @@ CardMedia
 --------------------------------- */
 
 import * as React from "react";
-import { $mediaHeight, $montserrat, $textShadow } from "../css-vars";
+import { mediaHeight, $montserrat, $textShadow } from "../css-vars";
 import { flex } from "../css-functions";
 import { css } from "@emotion/react";
 
-type CardMediaProps = {
+export type CardMediaProps = {
   background: string;
   title: string;
   infoItem_01?: { [s in string]: string };
@@ -32,7 +32,7 @@ export default function CardMedia({
     <div
       css={css`
         overflow: hidden;
-        height: ${$mediaHeight};
+        height: ${mediaHeight};
         position: relative;
         border-radius: 6px;
 
@@ -80,7 +80,10 @@ export default function CardMedia({
 
           &Item {
             &Title {
-              margin: 0;
+              text-transform: uppercase;
+              font-size: small;
+              margin: 0 0 0.5rem;
+              color: #999;
             }
           }
         }

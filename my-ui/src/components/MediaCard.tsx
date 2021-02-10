@@ -3,21 +3,18 @@ MediaCard
 --------------------------------- */
 
 import * as React from "react";
-import CardMedia from "./CardMedia";
+import CardMedia, { CardMediaProps } from "./CardMedia";
 import Card from "./Card";
-import RatingControls from "../_import/RatingControls/RatingControls";
 import { PropsWithChildren, ReactElement } from "react";
+import RatingControls from "./RatingControls";
 
-type MediaCardProps = {
+export type MediaCardProps = {
   withRating?: boolean;
-  medium: string;
-  title: string;
-};
+} & CardMediaProps;
 
 export function MediaCard({
   withRating,
-  medium,
-  title,
+  ...props
 }: PropsWithChildren<MediaCardProps>): ReactElement {
   return (
     <Card>
@@ -25,7 +22,7 @@ export function MediaCard({
       {withRating && <RatingControls initialRating={0} onRate={() => {}} />}
 
       {/* MEDIA SECTION */}
-      <CardMedia title={title} background={medium} />
+      <CardMedia {...props} />
     </Card>
   );
 }

@@ -1,27 +1,32 @@
 /* ---------------------------------
-FlippableCard
+MediaCardWithFlip
 --------------------------------- */
 
 import * as React from "react";
 import CardFlipControls from "./CardFlipControls";
 import Flip from "./Flip";
-import InfoSheet from "./InfoSheet";
+import InfoSheet, { InfoSheetProps } from "./InfoSheet";
 import Card from "./Card";
-import CardMedia from "./CardMedia";
+import CardMedia, { CardMediaProps } from "./CardMedia";
 // @ts-ignore
 import bg from "../stories/_assets/img/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpg";
+import { MediaCardProps } from "./MediaCard";
 
-/**
- * FlippableCard
- * @constructor
- */
-export const FlippableCard: React.FC = () => {
+export type MediaCardWithFlipProps = MediaCardProps &
+  CardMediaProps &
+  InfoSheetProps;
+
+export const MediaCardWithFlip: React.FC<MediaCardWithFlipProps> = ({
+  info,
+  withRating,
+  ...mediaProps
+}) => {
   return (
     <Flip>
       <Flip.Front>
         {({ setFlipped }) => (
           <Card>
-            <CardMedia background={bg} title={"Some title"} />
+            <CardMedia {...mediaProps} />
             <CardFlipControls back onFlip={() => setFlipped((f) => !f)} />
           </Card>
         )}
@@ -30,14 +35,7 @@ export const FlippableCard: React.FC = () => {
       <Flip.Back>
         {({ setFlipped }) => (
           <Card>
-            <InfoSheet
-              title={"the back"}
-              info={{
-                lumen: "Nunquam acquirere humani generis.",
-                zelus: "Nomens accelerare in dexter vasa!",
-                divio: "Azureus abactor interdum anhelares frondator est.",
-              }}
-            />
+            <InfoSheet title={mediaProps?.title} info={info} />
             <CardFlipControls back onFlip={() => setFlipped((f) => !f)} />
           </Card>
         )}
