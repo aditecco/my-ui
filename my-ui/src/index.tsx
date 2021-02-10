@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Card from "./components/Card";
 import { MediaCard } from "./components/MediaCard";
 import ContentCard from "./components/ContentCard";
-import { FlippableCard } from "./components/FlippableCard";
+import { MediaCardWithFlip } from "./components/MediaCardWithFlip";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -45,7 +45,7 @@ ReactDOM.render(
 
         <div>
           FlippableCard
-          <FlippableCard />
+          <MediaCardWithFlip />
         </div>
       </div>
     </div>

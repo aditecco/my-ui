@@ -18,12 +18,15 @@ import {
 } from "../css-vars";
 import { box } from "../css-functions";
 
-interface OwnProps {
+export interface InfoSheetProps {
   title: string;
   info: Record<string, string>;
 }
 
-export default function InfoSheet({ info, title }: OwnProps): ReactElement {
+export default function InfoSheet({
+  info,
+  title,
+}: InfoSheetProps): ReactElement {
   return (
     <div
       className="InfoSheetContent"
