@@ -17,36 +17,7 @@ ReactDOM.render(
           placeContent: "center",
         }}
       >
-        <div>
-          Card
-          <Card />
-        </div>
-
-        <div>
-          Card
-          <Card>
-            <h1>
-              Hello
-              <br />
-              world
-            </h1>
-          </Card>
-        </div>
-
-        <div>
-          MediaCard
-          <MediaCard />
-        </div>
-
-        <div>
-          ContentCard
-          <ContentCard />
-        </div>
-
-        <div>
-          FlippableCard
-          <MediaCardWithFlip />
-        </div>
+        .
       </div>
     </div>
   </React.StrictMode>,
