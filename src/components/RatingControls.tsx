@@ -3,9 +3,9 @@ RatingControls
 --------------------------------- */
 
 import * as React from "react";
-import MaterialIcon from "../_import/MaterialIcon/MaterialIcon";
 import styled from "@emotion/styled";
 import { useState } from "react";
+import MaterialIcon from "./MaterialIcon";
 
 interface OwnProps {
   initialRating?: number | undefined;
