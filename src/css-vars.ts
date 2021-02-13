@@ -78,6 +78,6 @@ export const $error = "rgba($flat-red-1, 0.8)";
 export const $paleYellow = "#fffae1e7";
 export const $strokeLight = "$backgroundMain";
 export const $darkGray = "#444";
-export const font = "lighten(black, 0.2)";
+export const font = "#111";
 export const fontAlt = "#444";
 export const $fontLight = "$flat-gray-4";

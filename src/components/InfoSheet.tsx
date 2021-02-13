@@ -40,12 +40,13 @@ export default function InfoSheet({
 
           .InfoSheetContentHeaderTitle {
             font-family: ${workSans};
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: normal;
             display: inline-block;
             border-bottom: 3px solid ${accent};
             margin: 0 0 0.75rem;
             text-transform: uppercase;
+            color: ${fontAlt};
           }
         }
 
@@ -74,7 +75,7 @@ export default function InfoSheet({
           }
 
           &:nth-child(even) {
-            background-color: #e2e2e2;
+            background-color: whitesmoke;
           }
 
           .DataKey {
