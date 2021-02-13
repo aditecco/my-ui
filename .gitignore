@@ -25,7 +25,6 @@ yarn-error.log*
 
 # tmp
 /src/_import
-/src/_ts
 
 # IDE
 /.idea

@@ -25,5 +25,4 @@
   "include": [
     "src/_ts"
   ],
-  "exclude": [""]
 }
