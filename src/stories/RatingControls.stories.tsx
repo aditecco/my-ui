@@ -4,7 +4,9 @@ RatingControls.stories.tsx
 
 import * as React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
-import RatingControls from "../components/RatingControls";
+import RatingControls, {
+  RatingControlsProps,
+} from "../components/RatingControls";
 
 export default {
   title: "Controls/RatingControls",
@@ -12,7 +14,9 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story<{}> = (args) => <RatingControls {...args} />;
+const Template: Story<RatingControlsProps> = args => (
+  <RatingControls {...args} />
+);
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = { standalone: true };

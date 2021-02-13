@@ -5,7 +5,12 @@ Card
 --------------------------------- */
 
 import * as React from "react";
-import { $cardMaxWidth, baseFontStack, cardHeight } from "../css-vars";
+import {
+  cardMaxWidth,
+  baseFontStack,
+  cardHeight,
+  cardWidth,
+} from "../css-vars";
 import { css } from "@emotion/react";
 import { PropsWithChildren, ReactElement } from "react";
 
@@ -19,7 +24,8 @@ export default function Card({
         background-color: white;
         border-radius: 6px;
         box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.25);
-        max-width: ${$cardMaxWidth};
+        width: ${cardWidth};
+        max-width: ${cardMaxWidth};
         height: ${cardHeight};
         font-family: ${baseFontStack};
         font-weight: 400;

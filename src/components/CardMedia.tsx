@@ -79,9 +79,12 @@ export default function CardMedia({
           margin: 0 1rem;
 
           &Item {
+            color: #f1f1f1;
+            font-size: 15px;
+
             &Title {
               text-transform: uppercase;
-              font-size: small;
+              font-size: 12px;
               margin: 0 0 0.5rem;
               color: #999;
             }
@@ -89,11 +92,13 @@ export default function CardMedia({
         }
       `}
     >
-      <img
-        src={background ?? ""}
-        alt={title ?? ""}
-        className="CardBackground"
-      />
+      <figure>
+        <img
+          src={background ?? ""}
+          alt={title ?? ""}
+          className="CardBackground"
+        />
+      </figure>
 
       <div className="CardBackdrop">
         <h3 className="CardBackdropTitle">{title ?? ""}</h3>

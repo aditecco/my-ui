@@ -7,16 +7,16 @@ import styled from "@emotion/styled";
 import { useState } from "react";
 import MaterialIcon from "./MaterialIcon";
 
-interface OwnProps {
+export type RatingControlsProps = {
   initialRating?: number | undefined;
   maxRating?: number | undefined;
   onRate?: (arg0) => void;
-}
+  standalone?: boolean;
+};
 
-const RatingControls = styled.span`
-  position: absolute;
-  top: 5px;
-  left: 5px;
+const RatingControls = styled.span<RatingControlsProps>`
+  ${props => !props.standalone && `position: absolute; top: 5px; left: 5px;`}
+  display: inline-block;
   z-index: 2;
   padding: 6px;
   border-radius: 4px;
@@ -37,7 +37,12 @@ const RatingControls = styled.span`
   }
 `;
 
-export default function ({ initialRating, maxRating = 5, onRate }: OwnProps) {
+export default function ({
+  initialRating,
+  maxRating = 5,
+  onRate,
+  standalone = false,
+}: RatingControlsProps) {
   const [starred, setStarred] = useState(initRating(initialRating) || {});
 
   /**
@@ -87,9 +92,7 @@ export default function ({ initialRating, maxRating = 5, onRate }: OwnProps) {
       setStarred(stars);
 
       onRate &&
-        onRate(
-          Object.values(stars).every((star) => !star) ? 0 : currentStar + 1
-        );
+        onRate(Object.values(stars).every(star => !star) ? 0 : currentStar + 1);
     }
   }
 
