@@ -22,3 +22,11 @@ export function box($pad = 0, $mar = 0, $isList = false): string {
   ${$isList ? `list-style: none` : ""}
   `;
 }
+
+export function round(size: number): string {
+  return `
+    width: ${size + "px;"}
+    height: ${size + "px;"}
+    border-radius: 50%;
+  `;
+}
