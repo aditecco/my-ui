@@ -67,12 +67,12 @@ export const $textShadow = "0 2px 20px black";
 export const $ligthTextShadow = "0 1px 1px rgba(black, 0.2)";
 
 // colors
-export const accent = "$flat-red-1";
+export const accent = "rebeccapurple";
 export const $accentDark = "$flat-red-2";
 export const $backgroundMain = "$flat-gray-1";
 export const $backgroundLight = "rgba($backgroundMain, 0.4)";
 export const $backgroundDark = "null";
-export const $transparent = "rgba(255, 255, 255, 0)";
+export const transparent = "rgba(255, 255, 255, 0)";
 export const $success = "$flat-green-1";
 export const $error = "rgba($flat-red-1, 0.8)";
 export const $paleYellow = "#fffae1e7";
@@ -81,3 +81,4 @@ export const $darkGray = "#444";
 export const font = "#111";
 export const fontAlt = "#444";
 export const $fontLight = "$flat-gray-4";
+export const hover = "";
