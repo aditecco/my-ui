@@ -14,7 +14,7 @@ export type SpinnerProps = {
   shadow?: string;
 };
 
-type SpinnerContainerProps = {
+export type SpinnerContainerProps = {
   inline?: boolean;
 };
 
