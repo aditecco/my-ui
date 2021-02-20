@@ -7,11 +7,12 @@ import styled from "@emotion/styled";
 import {
   accentDark,
   accent,
-  hover,
   padding,
   radius,
   transparent,
+  workSans,
 } from "../css-vars";
+import { rem } from "../css-functions";
 
 export type ButtonProps = {};
 
@@ -21,10 +22,11 @@ export type ButtonProps = {};
 export const Button = styled.button<ButtonProps>`
   display: inline-block;
   min-width: 100px;
-  padding: calc(${padding} / 2);
+  padding: ${rem(12)} ${rem(24)};
   border-radius: ${radius};
   border: 2px solid ${transparent};
   background-color: ${accent};
+  font-family: ${workSans};
   font-size: small;
   text-align: center;
   text-transform: uppercase;
