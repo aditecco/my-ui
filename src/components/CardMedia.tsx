@@ -5,7 +5,7 @@ CardMedia
 --------------------------------- */
 
 import * as React from "react";
-import { mediaHeight, $montserrat, $textShadow } from "../css-vars";
+import { mediaHeight, montserrat, $textShadow } from "../css-vars";
 import { flex } from "../css-functions";
 import { css } from "@emotion/react";
 
@@ -58,7 +58,7 @@ export default function CardMedia({
           &Title {
             padding: 1rem 1rem 0.25rem;
             margin: 0;
-            font-family: ${$montserrat};
+            font-family: ${montserrat};
             font-weight: normal;
             color: white;
             text-shadow: ${$textShadow};

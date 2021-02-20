@@ -13,17 +13,17 @@ export const $gutter = "$spacer";
 
 // families
 export const archivo = "'Archivo', sans-serif";
-export const $firaSans = "'Fira Sans', sans-serif";
+export const firaSans = "'Fira Sans', sans-serif";
 export const workSans = "'Work Sans', sans-serif";
-export const $montserrat = "'Montserrat', sans-serif";
-export const $material = "'Material Icons'";
+export const montserrat = "'Montserrat', sans-serif";
+export const material = "'Material Icons'";
 export const baseFontStack =
   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
 
 // styles
 export const $fontPrimary = null;
 export const $fontSecondary = null;
-export const $bodyFont = $firaSans;
+export const bodyFont = firaSans;
 export const $titleFont = archivo;
 export const $body = "16px";
 export const $small = "$body * 0.9";

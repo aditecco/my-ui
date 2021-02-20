@@ -30,3 +30,7 @@ export function round(size: number): string {
     border-radius: 50%;
   `;
 }
+
+export function rem(target: number, context = 16): string {
+  return target / context + "rem";
+}
