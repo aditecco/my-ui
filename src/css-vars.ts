@@ -2,6 +2,8 @@
 style-vars
 ======================== */
 
+const palette = require("material-colors-object/index.json");
+
 // layout
 export const padding = "20px";
 export const $_padding = "1.6rem";
@@ -67,8 +69,8 @@ export const $textShadow = "0 2px 20px black";
 export const $ligthTextShadow = "0 1px 1px rgba(black, 0.2)";
 
 // colors
-export const accent = "rebeccapurple";
-export const $accentDark = "$flat-red-2";
+export const accent = palette.purple.shades["700"].value;
+export const accentDark = palette.purple.shades["900"].value;
 export const $backgroundMain = "$flat-gray-1";
 export const $backgroundLight = "rgba($backgroundMain, 0.4)";
 export const $backgroundDark = "null";

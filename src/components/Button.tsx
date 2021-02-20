@@ -4,7 +4,14 @@
 
 import * as React from "react";
 import styled from "@emotion/styled";
-import { accent, hover, padding, radius, transparent } from "../css-vars";
+import {
+  accentDark,
+  accent,
+  hover,
+  padding,
+  radius,
+  transparent,
+} from "../css-vars";
 
 export type ButtonProps = {};
 
@@ -23,20 +30,12 @@ export const Button = styled.button<ButtonProps>`
   text-transform: uppercase;
   color: white;
   cursor: pointer;
-  transition: all 500ms ease;
+  transition: background 300ms ease-in-out, border 300ms ease-in-out,
+    color 300ms ease-in-out;
 
   &:hover {
-    //color: white;
-    //background-color:
+    background-color: ${accentDark};
   }
-`;
-
-/**
- * NakedButton
- */
-export const NakedButton = styled(Button)`
-  background-color: ${transparent};
-  color: ${accent};
 `;
 
 /**
@@ -48,7 +47,21 @@ export const OutlineButton = styled(Button)`
   border: 2px solid ${accent};
 
   &:hover {
-    border: 2px solid ${hover};
-    color: ${hover};
+    background-color: ${transparent};
+    border: 2px solid ${accentDark};
+    color: ${accentDark};
   }
+`;
+
+/**
+ * NakedButton
+ */
+export const NakedButton = styled(OutlineButton)`
+  border: 2px solid ${transparent};
+
+  // &:hover {
+  //   background-color: ${transparent};
+  //   border: 2px solid ${accentDark};
+  //   color: ${accentDark};
+  // }
 `;
