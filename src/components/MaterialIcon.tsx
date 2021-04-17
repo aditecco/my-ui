@@ -15,7 +15,5 @@ export default function MaterialIcon({
   icon,
   className,
 }: OwnProps): ReactElement {
-  return (
-    <i className={classNames(["material-icons", className ?? ""])}>{icon}</i>
-  );
+  return <i className={classNames(["material-icons", className])}>{icon}</i>;
 }

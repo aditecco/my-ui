@@ -19,7 +19,9 @@ export function MediaCard({
   return (
     <Card>
       {/* RATING */}
-      {withRating && <RatingControls initialRating={0} onRate={() => {}} />}
+      {withRating && (
+        <RatingControls initialRating={0} onRate={props?.onRate} />
+      )}
 
       {/* MEDIA SECTION */}
       <CardMedia {...props} />
